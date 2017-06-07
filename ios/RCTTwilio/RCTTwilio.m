@@ -7,7 +7,7 @@
 //
 
 #import "RCTTwilio.h"
-#import "RCTEventEmitter.h"
+#import <React/RCTEventEmitter.h>
 
 NSString *const deviceDidReceiveIncoming = @"deviceDidReceiveIncoming";
 NSString *const deviceDidStartListening = @"deviceDidStartListening";
@@ -122,7 +122,7 @@ RCT_EXPORT_METHOD(sendDigits:(NSString *) digits) {
   if (connection == _connection) {
     _connection = nil;
   }
-  
+
   if (connection == _pendingConnection) {
     _pendingConnection = nil;
   }
